@@ -323,6 +323,18 @@ body.nav-active { overflow: hidden; }
   z-index: 4;
 }
 
+header.header {
+  position: relative;
+  background-color: var(--midnight-green);
+  padding: 20px 0; /* Adjust padding as needed */
+}
+
+header.header .container {
+  position: relative;
+  z-index: 2; /* Ensures the content stays above the black background */
+}
+
+
 .header.active {
   position: fixed;
   background-color: var(--rich-black-fogra-29);
