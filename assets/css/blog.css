@@ -703,25 +703,30 @@
     #LISTING
   \*-----------------------------------*/
   
-  .listing { background-color: var(--alice-blue); }
-  
   .listing-card {
     padding: 25px 16px;
     display: flex;
+    flex-direction: column; /* Display children in a column layout */
+    align-items: center; /* Center align items horizontally */
     gap: 20px;
     border: 2px solid var(--middle-blue-green_40);
     border-radius: var(--radius-12);
     transition: var(--transition-1);
   }
   
-  .listing-card:is(:hover, :focus-visible) { border-color: var(--verdigris); }
-  
-  .listing-card .card-title {
-    margin-block-end: 5px;
-    font-family: var(--ff-oswald);
+  .listing-card:is(:hover, :focus-visible) {
+    border-color: var(--verdigris);
   }
   
-  .listing-card .card-text { color: var(--midnight-green); }
+  .listing-card .card-title {
+    margin: 0; /* Remove default margin */
+    font-family: var(--ff-oswald);
+    text-align: center;
+  }
+  
+  .listing-card .card-text {
+    color: var(--midnight-green);
+  }
   
   
   
