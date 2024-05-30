@@ -48,6 +48,27 @@ const toggleNav = function () {
 
 addEventOnElements(navTogglers, "click", toggleNav);
 
+/**
+ * FAQ TOGGLE
+ * 
+ * show the mobile navbar when click menu button
+ * and hidden after click menu close button or overlay
+ */
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.custom-faq details');
+
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.removeAttribute('open');
+        }
+      });
+    });
+  });
+});
 
 
 /**
